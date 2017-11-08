@@ -6,7 +6,7 @@ The game always allows user to start first. At the begining of the game, user is
 1. (s)He could either be dealt a new card from the deck (which could be requested with the help of the command like Hit or deal) or
 2. (s)He could stop from being dealt any more cards and final score is for the user is calculated in such a case.
 
-While playing there could also be two scenarios that could occur, 
+While playing there could also be two scenarios that could occur, which are as follows:
 
 1. While the cards is being dealt from the deck, the score of the cards reaches 21, in such a case, the player playing the game is declared as "Winner". (Here, the player corresponds to either the User, playing the game or a Computer, playing as an opponent). 
 2. While the cards are being dealt, the current score for the player could exceed the value 21, in such a case, that player is declared as a "Looser" for that game immideately. (Here, the player could be either the User playing the game or the Computer playing as an opponent).
