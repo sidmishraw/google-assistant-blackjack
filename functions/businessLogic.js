@@ -9,12 +9,13 @@ var RandomCardGenerator = function(){
 }
 var GetRandomCard= function(){
     while(true){
-        let tempVal = RandomCardGenerator();
+        var tempVal = RandomCardGenerator();
         if(checkIfValueInCardStack(cardFace[tempVal])){
             cardStack.push(cardFace[tempVal]);
             break;
         }
     }
+    return cardStack[cardStack.length-1];
 }
 var checkIfValueInCardStack = function(tempCardValue){
     for(var i=0; i<cardStack.length; i++){
@@ -25,7 +26,7 @@ var checkIfValueInCardStack = function(tempCardValue){
     return true;
 }
 var calculateMaxScore = function(stack){
-    let score = 0;
+    var score = 0;
     score = closestTo21(stack);
     return score;
 }
@@ -40,8 +41,8 @@ var getFaceValue=function(value){
     }
 }
 var printCardStack= function(){
-    let tempVal = ""
-    for(let i=0; i<cardStack.length; i++){
+    var tempVal = ""
+    for(var i=0; i<cardStack.length; i++){
         tempVal = tempVal+" "+cardStack[i];
     }
 }
@@ -52,7 +53,7 @@ var topple = function(score){
     return true;
 }
 var logicToCalculate_A = function(countA, score){
-    for(let i = countA; i>0; i--){
+    for(var i = countA; i>0; i--){
             if(score+11>21){
                 score = score +1;
             }else{
@@ -61,9 +62,9 @@ var logicToCalculate_A = function(countA, score){
     }
 }
 var closestTo21 = function(stack){
-    let countA = 0;
-    let score = 0;
-    for(let i=0; i<stack.length; i++){
+    var countA = 0;
+    var score = 0;
+    for(var i=0; i<stack.length; i++){
         if(stack[i]=='A'){
             countA = countA+1;
         }else{
