@@ -2,7 +2,7 @@
   "name": "functions",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "sidmishraw",
+  "author": "Sidharth Mishra and Gaurav Gupta",
   "license": "MIT",
   "dependencies": {
     "actions-on-google": "^1.5.1",
@@ -10,5 +10,17 @@
     "firebase-admin": "^5.4.3",
     "firebase-functions": "^0.7.2",
     "sprintf-js": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "path": "^0.12.7",
+    "webpack": "^3.8.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "clean": "rm -r ./dist",
+    "rebuild": "yarn clean && yarn build"
   }
 }
