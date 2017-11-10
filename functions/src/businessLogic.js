@@ -157,12 +157,13 @@ export const topple = function(score) {
  * @returns {number} The score after deciding the value of (A)s for the player
  */
 const logicToCalculate_A = function(countA, score) {
-  if (countA <= 0) return score;
+  score = score+(countA-1)*1;
   if (score + 11 > 21) {
-    return logicToCalculate_A(countA - 1, score + 1);
+    score = score+1;
   } else {
-    return logicToCalculate_A(countA - 1, score + 11);
+    score = score +11;
   }
+  return score;
 };
 
 /**
