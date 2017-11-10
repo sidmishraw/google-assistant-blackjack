@@ -157,7 +157,7 @@ export const topple = function(score) {
  * @returns {number} The score after deciding the value of (A)s for the player
  */
 const logicToCalculate_A = function(countA, score) {
-  if(countA<=0) { //base case: when there are no Aces (A) in the stack of cards.
+  if(countA<=0) { //base case: when there are no Aces(A's) in the stack of cards, simply return the current score.
       return score;
   }
   score = score+(countA-1)*1; // Explaination: Aces(A's) with value 11 could be added only once, rest of the Aces(A's) will add up to the score with value 1.
